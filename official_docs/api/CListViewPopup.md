@@ -1,0 +1,545 @@
+# `global` :: `CListViewPopup`
+
+**Category:** [Controls & Widgets](./README.md)
+
+Reconstructed from `ExplorerFrame.dll`. Total members: **123**.
+
+```cpp
+#pragma once
+
+#include <cstdint>
+
+// Forward declarations (automatically generated)
+class WindissectOpaque;
+class ATL; 
+class AgileRegistrationList; 
+class CAggregatedUnknown; 
+class CBrowserHost; 
+class CCollectionCache; 
+class CFirstPageResults; 
+class CInternetToolbar; 
+class CItemsView; 
+class CItemsViewPrefetcher; 
+class CMarshaledInterface; 
+class CNavBar; 
+class CNavigationTargetImpl; 
+class CNscTree; 
+class COwnerDrawPopupMenu; 
+class CSelectionState; 
+class CShellBrowser; 
+class CTravelLogUI; 
+class ControlPanelNavigationTelemetry; 
+class DirectLaunch; 
+class FileExplorerPerf; 
+class FileExplorerSessionWatcher; 
+class FileExplorerTabsTelemetry; 
+class FileExplorerTelemetry; 
+class FileExplorerTelemetryCommon; 
+class SQM; 
+class SessionWatcherTelemetry; 
+class SetDarkModeForWindows; 
+class UIItemsViewSelectionProxy; 
+class UIViewHeader; 
+namespace fc { class details; } 
+class fc_tson; 
+class tip2; 
+class tson; 
+class winrt; 
+class ATL; class AUDIT_CALLBACK_INFO; class AccessibilityHelpers; class ActivityData; class AddressEditAccessible; class AgileGitPtr; class AgileRegistrationList; class AnimatingRect; class AttemptLaunchWithPrelaunchResult; class BANDCLASSINFO; class BINDCTX_PARAM; class BaselineLayout; class CABSH; class CAboutWindowsCommand; class CAccessibleExWrapperBase; class CAccessibleWrapperBase; class CActionIdCommand; class CActionIdExecute; class CAddressBand; class CAddressEditAccessible; class CAddressEditBox; class CAddressList; class CAggregatedUnknown; class CAnimationManager; class CAnyGroupsSelected; class CAnyItemEntriesInGroup; class CAppCursorManager; class CAppMenuHandler; class CAssociationList; class CAutoDestItemsList; class CAutoFont; class CAutoSRWExclusiveLock; class CAutoSRWSharedLock; class CAutoWaitCursor; class CBandDataObject; class CBandItemData; class CBandSite; class CBandSiteMenu; class CBaseBar; class CBaseRPCTimeout; class CBreadcrumbBar; class CBrowserBandSite; class CBrowserBar; class CBrowserHost; class CBrowserMenuCallback; class CBrowserThreadHandshake; class CBufferedPaintManager; class CBuildUnmatchedItemAnimatingRects; class CCancelWithBool; class CChildrenList; class CCoSimpleArray; class CCollectionCache; class CCollectionEventSinkWrapper; class CComCatCacheTask; class CComPropVariant; class CCommandGalleryOnExplorerCommand; class CCommonExplorerHost; class CConnectionPoint; class CConnectionPointEnum; class CContextMenuOnContextMenuArray; class CContextMenuOnContextMenuArrayNoDuplicateVerbs; class CCountExplicitGroupEntries; class CCountItemEntriesInGroup; class CDPA; class CDSA; class CDUIResourceManager; class CDefaultHashPolicy; class CDefaultKeyCompare; class CDefaultRehashPolicy; class CDefaultResizePolicy; class CDelegateAccessibleImpl; class CDelegateDropTarget; class CDeleteAddressBarHistoryCommand; class CDeskBar; class CDeskBarApp; class CDesktopBrowserTarget; class CDisabledCommandHandler; class CDockingBar; class CDockingBarPropertyBag; class CDropDown; class CDropDummy; class CDropTargetWrap; class CDummyUnknown; class CElementIdentifier; class CElementSpy; class CElementSpyBase; class CElementWithIUnknown; class CElementWithSite; class CEnumCommandBase; class CEnumerableObjectCollection; class CExecuteCommandBase; class CExecuteFolder; class CExecuteItem; class CExplorerCommandBase; class CExplorerFrame; class CExplorerHostCreator; class CExplorerLauncher; class CExplorerRibbon; class CFSNotifyHelper; class CFileSysBindData; class CFilterCondition; class CFilterGroupsByItem; class CFilterItemsByGroup; class CFirstPageResults; class CFirstPageTask; class CFloatingWindow; class CFocusManager; class CFolderNetworkDrive; class CFrameTask; class CFrameTaskManager; class CFrameWorkItem; class CFrequentPlacesListWithUIProperties; class CGalleryOnExplorerCommandBase; class CGalleryPropertySet; class CGenericTabsetHandler; class CGetLastSelectedIndex; class CGhostingManager; class CGlobalFolderSettings; class CGlobalObject; class CIEFrameAuto; class CIEFrameAutoProp; class CIItemCompare; class CIItemHashPolicy; class CISFMenuCallback; class CImmersiveColor; class CImpIConnectionPointContainer; class CImpIDispatch; class CImpIExpDispSupport; class CImpWndProc; class CInplaceRename; class CInputObjectContainer; class CInternetToolbar; class CItemActionsManager; class CItemAncestorIterator; class CItemDevirtualizer; class CItemDevirtualizerInitialState; class CItemEventSinkWrapper; class CItemFinder; class CItemGalleryOnExplorerCommand; class CItemsView; class CItemsViewEventQueue; class CItemsViewPrefetcher; class CItemsViewSpy; class CKnownFoldersFilter; class CLVMenuAcc; class CLVPopupAccBase; class CLegacyBarsGalleryItem; class CLineScrollerSpy; class CListViewPopup; class CLocateExplicitGroupStateForMemberItem; class CMRUList; class CM_COLUMNINFO; class CMarshaledInterface; class CMultipleValues; class CNavBar; class CNavBarDUI; class CNavigationSite; class CNavigationTargetImpl; class CNoOpCommandHandler; class CNotifySubclassWndProc; class CNscAccessible; class CNscChangeNotifyQueueItem; class CNscChangeNotifyTask; class CNscDelayRegisterNotifyQueueItem; class CNscDelayRegisterNotifyTask; class CNscDropTargetWrapper; class CNscEditLabelInfo; class CNscEnumQueueItem; class CNscEnumTask; class CNscIconQueueItem; class CNscIconTask; class CNscInfoTipQueueItem; class CNscInfoTipTask; class CNscLock; class CNscOverlayQueueItem; class CNscOverlayTask; class CNscPlusQueueItem; class CNscPlusTask; class CNscSortTask; class CNscTree; class CNscValidateQueueItem; class CNscValidateTask; class COMMAND_HANDLER_INFO; class COMMAND_RANGE_INFO; class COOLBARSAVE; class CObjectWithSite; class COpenWithTypeOverride; class COrderList; class COwnerDrawPopupMenu; class CPendingNavigation; class CPerfTrackProvider; class CPersistExplorerFrame; class CPrefetchTask; class CPrefetcherEventSink; class CPrintClientStruct; class CProfferService; class CPropVariant; class CPropertyStoreHelper; class CPropertyValue; class CPublicTravelLog; class CPublicTravelLogCreateHelper; class CQueueItem; class CRGTypeSizes; class CRealizedIntervalHelper; class CRecentItemPropertySet; class CRegion; class CRibbonCommandHandlerOnExplorerCommand; class CRibbonTelemetry; class CRunnableTask; class CRunnableTaskWithActivatableKeyboard; class CSCParsedTerm; class CSDEnumWindows; class CSDWindows; class CSRWLock; class CSafeElementListenerCB; class CSearchBox; class CSearchBoxDUIHost; class CSearchBoxProvider; class CSearchBoxProxy; class CSearchBoxTextProvider; class CSearchBoxTextProxy; class CSearchBoxTextRangeProvider; class CSearchBoxValueProvider; class CSearchBoxValueProxy; class CSearchClearMruCommand; class CSearchCloseTabCommand; class CSearchCommandBase; class CSearchControl; class CSearchDepthCommand; class CSearchEditBox; class CSearchEditBoxBase; class CSearchEditBoxHost; class CSearchEditTextHost; class CSearchFilterExplorerCommand; class CSearchMRUEnumCommand; class CSearchMRUGallery; class CSearchMSExecute; class CSearchManager; class CSearchMorePropertiesCommand; class CSearchMorePropertiesEnum; class CSearchMruCommand; class CSearchOptionCommand; class CSearchSaveSearchCommand; class CSearchSendToCommand; class CSearchSendToComputerCommand; class CSearchSendToEnumCommand; class CSearchSendToGalleryCommand; class CSearchSendToHistoryVaultCommand; class CSearchSendToInternetCommand; class CSearchStaticFilterEnum; class CSearchStaticFilterExplorerCommand; class CSearchTabHandler; class CSearchTryHarderCommand; class CSelectionManager; class CSelectionManagerSpy; class CSelectionState; class CSelectionStateArrayBuilder; class CSelectionStateComparator; class CSelectionStateList; class CSelectionStateSpy; class CSeparatorBand; class CShallowContainerIterator; class CShellBrowser; class CShellBrowserWindowClassFactory; class CShellViewFactory; class CShellViewProvider; class CShellViews; class CShellWindowListCF; class CSimpleArrayStandardCompareHelper; class CSimpleHashTable; class CSimplePointerArrayNewMem; class CSinkWrapperBase; class CSiteWithNamespacePropertyBag; class CStandardEnum; class CSuggestMRUWorker; class CSuggestPopup; class CSuggestPopupInfo; class CSyncCommandEnumerator; class CSyncCommandGallery; class CSyncMappingsCommandStateHandler; class CTBMenuAcc; class CTCoAllocPolicy; class CTContainer_PolicyUnOwned; class CTGlobalAllocPolicy; class CTLocalAllocPolicy; class CTabSearchTarget; class CTaskLock; class CTestabilityUICollection; class CTheater; class CTheaterBand; class CToolBand; class CToolTipManager; class CTrackEvents; class CTravelBand; class CTravelLogUI; class CTryHarderItem; class CTryHarderItemHistoryVault; class CTypeAhead; class CUIItemWalkCB; class CUIItemWalkCBWorker; class CUString; class CUniversalSearchBand; class CUpBand; class CValuePtr; class CViewOptionsGalleryCommand; class CViewOptionsGalleryEnum; class CViewSet; class CVirtualUIGroupItem; class CVirtualUIGroupItemList; class CVirtualUIGroupItemSpy; class CVirtualizedSelectionObjectArray; class CWRLObjectWithGITSite; class CWRLObjectWithSite; class CWaitCursorManager; class CWaitTask; class CZeroInitNew; class CachedExplorerExtensionState; class CheckAndReNavigateToParentTask; class CheckWhitespaceEvent; class CloseHandle; class CloudFileProvider; class CloudFilesTelemetry; class CoTaskMemFree; class CollectionEventParams; class ColumnWidthRequestEvent; class ContextMenuRenderingData; class ControlPanelNavigationTelemetry; class DEFFOLDERSETTINGS; class DESKBANDINFO; class DeleteObject; class DeskBarsPerMonitor; class Destroy; class DevicePrelaunchProfile; class DirectLaunch; class DirectLaunchActivationSite; class DisplayMonitor; class DummyEventTrack; class EASYCLASSFACTORY; class EdpHelpers; class EnhancedSearchResultSeenMetadata; class Entry; class ExplorerDirectLaunchHandler; class ExplorerFrameTelemetry; class ExplorerHostWithPrelaunch; class ExplorerHostWithPrelaunchFactory; class ExplorerRibbonProxy; class ExternalResultsStatusCensusMetadata; class FEATURE_ERROR; class FEATURE_LOGGED_TRAITS; class FEATURE_STATE_CHANGE_SUBSCRIPTION__; class FEBrowserTab; class FRAMETOOLBARITEM; class FadeElement; class FeatureEnabledLayoutLayout; class FileActionMetadata; class FileExplorerContextMenu; class FileExplorerCustomProvider; class FileExplorerCustomTitlebar; class FileExplorerErrorFallback; class FileExplorerLogging; class FileExplorerPerf; class FileExplorerPolicyTelemetryData; class FileExplorerPrelaunchTelemetry; class FileExplorerSessionWatcher; class FileExplorerTabData; class FileExplorerTabsRestoreTelemetry; class FileExplorerTabsTelemetry; class FileExplorerTelemetry; class FileExplorerTelemetryCommon; class FileExplorerTelemetryDesktop; class FirstVisibleElementOnlyLayout; class FloatingHeaderLayout; class FolderOptionsTelemetry; class ForceSyncShellExecuteService; class GMA_ACTIONINFO; class GlobalInterfaceTable; class GrepCrawlerMetadata; class GrepScanCompleteMetadata; class GridHitTestParameters; class GroupedViewLayoutWalker; class HACCEL__; class HBITMAP__; class HBRUSH__; class HDC__; class HFONT__; class HICON__; class HIMC__; class HINSTANCE__; class HKEY__; class HKL__; class HMENU__; class HMONITOR__; class HPALETTE__; class HRGN__; class HSTRING__; class HTIPTEST__; class HWND__; class HashBucket; class HorizontalBorderLayout; class IAccessible; class IAccessibleEx; class IAddressEditBox; class IAddressList; class IAdviseSink; class IAgileReference; class IAssociationElement; class IAutoComplete; class IAutomaticDestinationList; class IAutomaticDestinationListPropertyStore; class IBandSite; class IBindCtx; class IBreadcrumbBar; class IBrowserActivationEvent; class IBrowserHost; class IBrowserProgressAggregator; class IBrowserThreadHandshake; class ICIVERBTOIDMAP; class ICancelMethodCalls; class IChildId; class IClassFactory; class ICollectionCache; class ICollectionEventSink; class ICondition; class ICondition2; class IConditionFactory2; class IConnectionCreatedCallback; class IConnectionPoint; class IConnectionPointContainer; class IContextMenu; class IContextMenu2; class IContextMenu3; class IContextMenuCB; class IDataObject; class IDeskBand; class IDeskBar; class IDispatch; class IDockingWindow; class IDockingWindowSite; class IDragRegionOffsetChangeListener; class IDrawPropertyControl; class IDropTarget; class IDuiBehavior; class IETHREADPARAM; class IElementSpy; class IEnterpriseDropTarget; class IEnumConnectionPoints; class IEnumConnections; class IEnumExplorerCommand; class IEnumFORMATETC; class IEnumGUID; class IEnumGeneric; class IEnumObjects; class IEnumSTATDATA; class IEnumString; class IEnumTravelLogEntry; class IEnumUnknown; class IEnumVARIANT; class IErrorLog; class IEventQueue; class IExplorerCommand; class IExplorerCommandHost; class IExplorerFrame; class IExplorerFrameCallback; class IExplorerFrameSizeUtils; class IExplorerRibbon; class IFileExplorerTabEventsHandler; class IFileExplorerTabsExtensionHelpers; class IFileOperation; class IFilterCondition; class IFilterControl; class IFirstPageResults; class IFocusAdviseSink; class IFocusManager; class IFolderFilter; class IFolderView2; class IFrameLayoutDefinition; class IFrameTaskManager; class IFrameWorkItem; class IIconListControl; class IImageList2; class IImmersiveContextMenuOwnerDrawHelper; class IInputObject; class IInspectable; class IItem; class IItemCollection; class IItemStore; class IItemsViewSpyClient; class IKnownFolder; class ILibraryDescription; class ILinguisticAlternativeGenerator; class IListControlHost; class IListView; class IListViewPopup; class IListViewPopupCallback; class ILocationDescription; class IMenuBand; class IMoniker; class IMruDataList; class INDEX_AND_VERSION; class INPUTOBJ_CHILDDATA; class INVALIDATION_INFO; class INameSpaceTreeControlDropHandler; class INameSpaceTreeControlEvents; class INameSpaceTreeControlFolderCapabilities; class INscTreeTasksCallback; class IObjectArray; class IObjectCollection; class IObjectWithAssociationElement; class IObjectWithSelection; class IOleCommandTarget; class IOleInPlaceActiveObject; class IOleInPlaceFrame; class IOleInPlaceUIWindow; class IOleObject; class IOleWindow; class IOpenWithTypeOverride; class IPendingNavigation; class IPersistHistory; class IPropertyBag; class IPropertyDescription; class IPropertyDescriptionList; class IPropertyKeyStore; class IPropertyStore; class IPropertyValue; class IQueryAssociations; class IQueryParser2; class IQuerySource; class IQueryWithLinguisticAlternatives; class IQueueItem2; class IRawElementProviderFragment; class IRawElementProviderFragmentRoot; class IRawElementProviderSimple; class IRichChunk; class IScope; class IScopeItem; class ISearchContext; class ISecurityZoneChecker; class ISelectionManager; class ISelectionManagerSpy; class IServiceProvider; class IShellBandProxy; class IShellBrowser; class IShellBrowserService; class IShellFolder; class IShellFolder2; class IShellFolder2const; class IShellFolder3; class IShellItem; class IShellItem2; class IShellItemArray; class IShellItemFilter; class IShellNavigationBand; class IShellNavigationTarget; class IShellSearchBand; class IShellSearchControl; class IShellSearchScope; class IShellSearchTarget; class IShellTaskScheduler; class IShellTravelLogUI; class IShellUrl; class IShellView; class IStorage; class IStorageProviderAppInfo; class IStorageProviderInfo; class IStream; class ISuggestMRUCallback; class ISuggestPopupCallback; class ISuggestPopupInfo; class ISyncRootManager; class ISystemSignalProvider; class ITelemetryCorrelationVector; class ITextDocument; class ITextHost; class ITextRange; class ITextRangeProvider; class ITokenCollection; class ITopViewAwareItem; class ITrackEvents; class ITrackShellMenu; class ITravelEntry; class ITravelLog; class ITravelLogEntry; class ITravelLogEx; class ITravelLogStg; class ITryHarderItem; class ITypeInfo; class IUIAutomationProxyFactory; class IUICollection; class IUICommandHandler; class IUIFramework; class IUIImage; class IUIRibbon; class IUISimplePropertySet; class IURLSearchHook; class IUnknown; class IUpdatableItemSet; class IUri; class IUserActivityRequestManagerInterop; class IVGridProvider; class IVGridProxy; class IVInvokeProvider; class IVInvokeProxy; class IVerbStateTaskCallBack; class IViewFilters; class IViewFrame; class IViewFrameHost; class IViewObject; class IViewSettings; class IVirtualUIGroupItem; class IVirtualizedUI; class IWICBitmapSource; class IWICImagingFactory; class IWeakReference; class IWebBrowser2; class IWinEventHandler; class IXamlIslandViewAdapter; class ImmersiveContextMenuHelper; class Interval; class ItemEventParams; class ItemGridLayout; class ItemGridLayoutWalker; class ItemIndex; class ItemLayout; class ItemNavigateEvent; class ItemRowLayout; class Iterator; class LAUNCH_REQUEST_ARGS; class LAYOUTPARAM; class LIBRARYEVENTS; class LVPopupMenuAccBase; class LeaveCriticalSection; class LineHScrollBar; class LineScrollbarBase; class LineScroller; class LineVScrollBar; class LineViewer; class LinkedViewer; class LocalFree; class NAVIGATIONSTATE; class NMCBEDRAGBEGINA; class NMCBEDRAGBEGINW; class NMCBEENDEDITA; class NSCITEMINFO; class NSC_BKGDENUMDONEDATA; class NamespaceRestrictionHelper; class NavigationMetadata; class NscCloudStateIconExtractor; class NscCloudStateIconManager; class NscCloudStateIconQueueItem; class NscCloudStateIconTask; class ORDERITEM; class ORDERITEM2const; class PERSISTEDFRAME; class POINTV; class PaintSurrogate; class PathPiiProperties; class PathProperties; class PatternMap; class PiiSafeFolderList; class PiiSafeKnownFolder; class PiiSafeRegistryFolder; class PiiSafeShellitemParsingName; class PiiSafeShellitemParsingNameHelpers; class PiiSafeShellitemParsingNameProperties; class PrefetchRowPriorityCompare; class QueuedEvent; class RECTV; class RegCloseKey; class ReleaseSRWLockExclusive; class Resizer; class RowInfo; class RowPrefetchInfo; class SESSION_EVENT_METADATA; class SHDestroyIETHREADPARAM; class SINKENTRY; class SIZEV; class SORTCOLUMN; class SQM; class SToolbarItem; class ScaffoldingWindowDropTarget; class SearchMetadata; class SectionInfo; class SelectionState; class SessionWatcherTelemetry; class SetDarkModeForWindows; class ShStrW; class ShellItemCompare; class ShellItemData; class ShouldPrelaunchFileExplorerResult; class SmartCookie; class State; class SyncProviderTelemetryHelpers; class SystemSignalMonitor; class SystemSignalProvider; class THUMBBUTTON; class TLV; class TOPVIEWKEY; class TRACKEDOPERATION; class TabletModeHelpers; class TaggedElement; class TaskbarList; class TaskbarLogging; class TelemetryCorrelationVectorServiceProvider; class TipReportingInfo; class TraceLoggingCorrelationVector; class TraceLoggingCorrelationVectorV1_t; class TraceLoggingCorrelationVectorV2_t; class TrayHelpers; class UIBase; class UICheckbox; class UICollection; class UIColumnHeader; class UIColumnHeaderCheckbox; class UIColumnHeaderExpandCollapseProvider; class UIColumnHeaderExpandCollapseProxy; class UIColumnHeaderProvider; class UIColumnHeaderProxy; class UICount; class UID; class UIDetailsPropertyCollection; class UIExpandoButton; class UIGroupHeader; class UIGroupHeaderExpandCollapseProvider; class UIGroupHeaderExpandCollapseProxy; class UIGroupHeaderProvider; class UIGroupHeaderProxy; class UIGroupItem; class UIGroupItemExpandCollapseProvider; class UIGroupItemExpandCollapseProxy; class UIImage; class UIItem; class UIItemCollectionBase; class UIItemGridItemProvider; class UIItemGridItemProxy; class UIItemProvider; class UIItemProxy; class UIItemScrollItemProvider; class UIItemScrollItemProxy; class UIItemSelectionItemProvider; class UIItemSelectionItemProxy; class UIItemToggleProvider; class UIItemToggleProxy; class UIItemValueProvider; class UIItemValueProxy; class UIItemsView; class UIItemsViewItemContainerProvider; class UIItemsViewItemContainerProxy; class UIItemsViewMultipleViewProvider; class UIItemsViewMultipleViewProxy; class UIItemsViewProvider; class UIItemsViewProxy; class UIItemsViewScrollProvider; class UIItemsViewScrollProxy; class UIItemsViewSelectionProvider; class UIItemsViewSelectionProxy; class UIItemsViewTableProvider; class UIItemsViewTableProxy; class UIMarqueeSelector; class UIProgressProperty; class UIProperty; class UIPropertyGridItemProvider; class UIPropertyGridItemProxy; class UIPropertyProvider; class UIPropertyProxy; class UIPropertyTableItemProvider; class UIPropertyTableItemProxy; class UIPropertyValueProvider; class UIPropertyValueProxy; class UIRenameTextElement; class UIRootItem; class UISmartProperty; class UISmartPropertyCollection; class UISubsetFooter; class UITilesPropertyCollection; class UITryHarder; class UITryHarderButton; class UIViewHeader; class UiaPoint; class UiaRect; class VIRTUALPOINT; class VIRTUALRECT; class VerticalHitTest; class ViewAreaAwareLayout; class VirtualElementProvider; class VirtualElementProxy; class VirtualizedItemProxy; class VisualChangeEvent; class WORKITEMENTRY; class WindowData; class WindowsCopilotCommonTelemetry; class WrappingLayoutBase; class _AppBarData; class _CMINVOKECOMMANDINFO; class _CMINVOKECOMMANDINFOEX; class _CONTEXT; class _DPA; class _DPASTREAMINFO; class _DSA; class _EVENT_DESCRIPTOR; class _EVENT_FILTER_DESCRIPTOR; class _EXCEPTION_RECORD; class _FILETIME; class _GUID; class _HIDDENITEMID; class _IDA; class _IDREGITEM; class _IMAGELIST; class _ITEMIDLIST_ABSOLUTE; class _ITEMIDLIST_RELATIVE; class _ITEMID_CHILD; class _LARGE_INTEGER; class _MARGINS; class _POINTL; class _RTL_CRITICAL_SECTION; class _RTL_RUN_ONCE; class _RTL_SRWLOCK; class _RTL_VERSION_RESOURCE; class _SECURITY_ATTRIBUTES; class _SHSQM_STREAM_ENTRY; class _SYSTEMTIME; class _TBBUTTON; class _TP_CALLBACK_INSTANCE; class _TP_TIMER; class _TP_WAIT; class _TREEITEM; class _TlgReflectorTag_Param0IsProviderType; class _UI_EVENTPARAMS; class _ULARGE_INTEGER; class _WIN32_FIND_DATAW; class _WINDOWDATA; class _WNF_STATE_NAME; class __FC_Config_Info; class __WIL_RTL_FEATURE_USAGE_DATA; class __WIL__WNF_STATE_NAME; class _charformatw; class _charrange; class _paraformat; class _tagOLECMD; class _tagOLECMDTEXT; class _tagpropertykey; class _tip_AddToRestartListTabsTipTest; class _tip_AttemptLaunchFromPrelaunchTest; class _tip_ContextMenuCreationTest; class _tip_ContextMenuE2ELoadTest; class _tip_ContextMenuInitTest; class _tip_ContextMenuSelectionTest; class _tip_CreateTabsInExplorerFrameTipTest; class _tip_DestroyRibbonTest; class _tip_ExplorerFrameLeakDetectionTest; class _tip_FileExplorerAddTab; class _tip_FileExplorerFirstTabLaunch; class _tip_FileExplorerInitialSearchResultsShownTest; class _tip_FileExplorerNavigationTest; class _tip_FileExplorerRecallSnapshotTest; class _tip_FileExplorerRemoveNonActiveTab; class _tip_FileExplorerRemoveTab; class _tip_FileExplorerResetDefaultLocation; class _tip_FileExplorerSearchSuccessTest; class _tip_FileExplorerSearchTimeToResultsTest; class _tip_FileExplorerSelectTab; class _tip_FileExplorerUptimeTest; class _tip_FileExplorerWindowCreationTest; class _tip_MergeOnScaffoldingWindowTest; class _tip_NetworkExplorerInHKCUTest; class _tip_PrelaunchCreationTest; class _tip_PrelaunchDisuseTest; class _tip_PrelaunchFolderOptionsTest; class _tip_PrelaunchSleepAwareTimerTest; class _tip_ReorderOnScaffoldingWindowTest; class _tip_SearchManagerTextNotifyTest; class _tip_ShowWindowWithTabsTipTest; class _tip_SlowNavigationProgressTest; class _tip_TabTearOutTest; class _tip_TabsMergeTest; class _tip_WindowsCopilotScenarioTest; class _tlgProvider_t; class _tlgWrapSz; class _tlgWrapperByRef; class _tlgWrapperByVal; class detail; class fc_tson; class lambda_00ce8e387b60a7fa00bc8e9a9601542f; class lambda_024f82efb7bc3000e576f7705d6f5cd9; class lambda_05cef1f6fdf474c9f3ed207deba0f73b; class lambda_0d865b96fce7c02641690f4c93be6806; class lambda_0e39b4e02d07fc3330b16054b36d48cc; class lambda_0f74a0f345f7eca60d6d8c04998bdda6; class lambda_1202056a50374f382f18b548cd8c62b7; class lambda_16e90beb890bb5a0f3e760349136ba81; class lambda_20eaf2ae38bac8d8141dfa3f560706d1; class lambda_255728157cf8e92998065ff06efe801f; class lambda_2d96d65d47e7ec198bc5b4de1272ee1a; class lambda_2def4ccacff58dc0da180ad4b5e56bd5; class lambda_339d3f1d0c5bc0230d28e078b9658e04; class lambda_3b9fea0dbaad833e0b9901a1c8d399b0; class lambda_3fdb14453883e86a37ebade6a7a0ebb0; class lambda_40773fbd244f40f0b5ad127646143511; class lambda_4d1595eac8d304e01698e743133a1ad9; class lambda_5340a5206b86b7efb2f73d6bfcb3f8b3; class lambda_568c6389a1490ada7d9fdc5d11e881fa; class lambda_5d23ff91044053a6ae8aa28289a53a5f; class lambda_5e85c96a841e7f30653e6c6cf6ac12a8; class lambda_66f57f934f28d61049862f64df852ff0; class lambda_6b2f0bb6bfa842853de3d2327e2d5be9; class lambda_6df25296dd1b6c0df63547afd4de28ea; class lambda_6ea08084ff2016457810ffbf7ab6567d; class lambda_7030d12a21dba11210293044e97fe9c7; class lambda_7f96eb1dcf99da5daec8c2467d2d5499; class lambda_840ec761dd49d8a17efe12aadd7e9d30; class lambda_936698dc83d6cdb1f7304d46027e9e4c; class lambda_93d2c3b72be9e6d2e3c33f67c7354e40; class lambda_94c343128cf4cf6b48a0b8c3d2e800af; class lambda_99b006a8ae3a80a4957eaf048e888d67; class lambda_9fdd738818a5db99761906f6e1b6d3d8; class lambda_a0954c30a2483de78b0e4cd1ea84ebb1; class lambda_adb90a0da4a71cb3d7add58ad056c51a; class lambda_b70241e9b5ebaad244db3e52d52cab17; class lambda_b89503deffd3d9deeb3691810e6ee82b; class lambda_bd25f92f57fa1fc91e904174f91d3684; class lambda_c004ed9f893a0f4829dcfe90749e2b29; class lambda_c221bd1dc91b3df6e549e973afe21711; class lambda_c8f27fa31b9ac74b9eb0fa345e06dda1; class lambda_cabce5c62f950e0af634f5d6b72bfafb; class lambda_d65e858be2b88916ed7798f9f43c779a; class lambda_d6fa5077a80ded0d708b72f4341d59d5; class lambda_e70f1c675cda3afdb8ceefd5b0d8017b; class lambda_efe82d0a3b14cf2386548b3010d1789a; class lambda_f56aff78e21dc292aa900c3ba9a00304; class lambda_f7b635380627b618499f66d304958878; class lambda_f92c6db5383b26d8880a1a6461b0d18b; class lambda_fe718337787c493ce2d833414db25eba; class prelaunch_props; class promise_type; class shared_type; class slow_navigation_props; class tagBANDSAVE; class tagBANDSITEINFO; class tagCONNECTDATA; class tagCREATESTRUCTW; class tagDISPPARAMS; class tagDRAWITEMSTRUCT; class tagEXCEPINFO; class tagFORMATETC; class tagFolderSetDataBase; class tagGESTUREINFO; class tagGESTURENOTIFYSTRUCT; class tagGMSG; class tagHITRANGE; class tagLCITEM; class tagLOGFONTW; class tagLOGPALETTE; class tagLVITEMW; class tagLVPINITSTRUCT; class tagMEASUREITEMSTRUCT; class tagMENUITEMINFOW; class tagMOUSEHOOKSTRUCT; class tagMOUSEHOOKSTRUCTEX; class tagMSG; class tagNMCUSTOMDRAWINFO; class tagNMHDR; class tagNMLISTVIEW; class tagNMLVGETINFOTIPW; class tagNMMOUSE; class tagNMRBAUTOSIZE; class tagNMREBAR; class tagNMTBGETINFOTIPW; class tagNMTBHOTITEM; class tagNMTOOLBARW; class tagNMTREEVIEWW; class tagNMTTDISPINFOA; class tagNMTTDISPINFOW; class tagNMTVASYNCDRAW; class tagNMTVGETINFOTIPW; class tagOIFI; class tagOISTREAMITEM; class tagOleMenuGroupWidths; class tagPOINT; class tagPROPVARIANT; class tagREBARBANDINFOW; class tagRECT; class tagSAFEARRAY; class tagSIZE; class tagSMDATA; class tagSMINFO; class tagSTGMEDIUM; class tagSTYLESTRUCT; class tagTBADDBITMAP; class tagTVDISPINFOEXW; class tagTVDISPINFOW; class tagTVITEMEXW; class tagVARIANT; class tagWINDOWPLACEMENT; class tagWINDOWPOS; class thunk; class tip2; class tson; class type; class type_info; class wil_FeatureState; class wil_details_FeatureReportingCache; class wil_details_FeatureStateCache; class wil_details_FeatureUsageSRUM; class winrt; 
+namespace BandSizing { class BandSizingHelper; } 
+namespace DeskbandTelemetry { class AddNewToolbarContext; class RemoveToolbarContext; class ToggleDeskbandContext; class ToggleSpecialFolderDeskbandContext; } 
+namespace DirectUI { class AutoDefer; class AutoLock; class BaseScrollBar; class BorderLayout; class Button; class CCBase; class CCBaseScrollBar; class CenteringLayout; class ClassInfo; class ClassInfoBase; class CritSecLock; class DCSurface; class DUIXmlParser; class DoubleAllocationPolicy; class DynamicArray; class DynamicArrayBase; class Edit; class Element; class ElementProvider; class ElementProviderManager; class Event; class FillLayout; class FlowLayout; class GridLayout; class HWNDElement; class HWNDElementProvider; class HWNDElementProxy; class HWNDHost; class IClassInfo; class IDialogElement; class InputEvent; class InvokeHelper; class KeyboardEvent; class KeyboardNavigateEvent; class Layout; class MARGINFLAGS; class ModernProgressBar; class MouseDragEvent; class MouseEvent; class NavReference; class NineGridLayout; class OverflowLayout; class PropNotify; class PropertyInfo; class ProviderProxy; class RowLayout; class ShellBorderLayout; class StandardCreator; class Surface; class TableLayout; class ThemeChangedEvent; class Thumb; class TouchHWNDElement; class UiaArray; class Value; class VerticalFlowLayout; class Viewer; } 
+namespace GraphFilesTip { class _tip_GraphHomeNavigateTip; } 
+namespace HeartbeatMonitor { class StallEventInfo; class WindowEventDrivenHeartbeatMonitor; class WindowMessageHeartbeatMonitor; class WindowSessionRollupMonitor; class _tip_EventDrivenHeartbeatMonitorTipTest; class _tip_HeartbeatMonitorTipTest; class _tip_SessionRollupTipTest; class details; } 
+namespace KindFilter { class BuiltKindRow; } 
+namespace Microsoft { namespace WRL { class AgileRef; class ComPtr; class Details; class FtmBase; class RuntimeClassFlags; } } 
+namespace Microsoft { namespace WRL { namespace Wrappers { class HString; class HStringReference; } } } 
+namespace NonBlockingCache { class Cache; } 
+namespace SystemSignalTip { class _tip_FetchDiskType; class _tip_PrelaunchEligibility; } 
+namespace TestInfo_ODR_guard { class TestInfo; } 
+namespace Windows { class Foundation; } 
+namespace Windows { namespace ApplicationModel { namespace DataTransfer { class IDataPackageView; } } } 
+namespace Windows { namespace Data { namespace Json { class IJsonObjectStatics; } } } 
+namespace Windows { namespace Internal { class ComTaskPool; class ResourceString; class SyncRootHelpers; } } 
+namespace Windows { namespace Internal { namespace SearchPlatformAPI { class MatchTagHelpers; } } } 
+namespace Windows { namespace Internal { namespace Shell { namespace FileExplorer { class IDefaultLocationStatics; } } } } 
+namespace Windows { namespace Internal { namespace ShellHelpers { class PropertySetHelper; } } } 
+namespace details { class ObjectArrayAdapterImpl; } 
+namespace fc { class change_profile; class config_property_base; class config_props; class config_value; class details; class validate_result; } 
+namespace std { class _Array_iterator; class _Deleter_base; class _Fake_no_copy_callable_adapter; class _Func_base; class _Func_class; class _Hash_find_last_result; class _List_iterator; class _List_node; class _List_simple_types; class _List_unchecked_iterator; class _List_val; class _Ref_count_base; class _Simple_types; class _State_manager; class _String_iterator; class _String_val; class _System_error; class _Tree_const_iterator; class _Tree_find_result; class _Tree_id; class _Tree_node; class _Tree_simple_types; class _Tree_val; class _Uhash_compare; class _Vector_const_iterator; class _Vector_iterator; class _Vector_val; class allocator; class atomic; class bad_alloc; class bad_array_new_length; class bad_optional_access; class bad_weak_ptr; class basic_string; class basic_string_view; class char_traits; class default_delete; class equal_to; class error_code; class error_condition; class exception; class exception_ptr; class function; class future; class future_error; class hash; class invalid_argument; class less; class logic_error; class mutex; class nothrow_t; class nullptr_t; class optional; class pair; class promise; class ratio; class runtime_error; class set; class shared_ptr; class system_error; class tuple; class unique_lock; class unique_ptr; class vector; } 
+namespace std { namespace chrono { class duration; class steady_clock; class time_point; } } 
+namespace std { namespace experimental { class coroutine_handle; class coroutine_traits; } } 
+namespace wil { class ActivityBase; class ActivityThreadWatcher; class CallContextInfo; class DiagnosticsInfo; class FailureInfo; class ResultException; class StoredFailureInfo; class ThreadErrorContext; class WNF_CHANGE_STAMP_STRUCT; class basic_zstring_view; class com_ptr_t; class err_exception_policy; class err_returncode_policy; class function_deleter; class process_heap_deleter; class registry_watcher_t; class srwlock; class unique_any_t; } 
+namespace wil { namespace details { class DestroyThreadPoolTimer; class DummyUnknown; class FeatureLogging; class FeatureStateManager; class FreeProcessHeap; class IFailureCallback; class IFunctor; class IFunctorHost; class ResultStatus; class StoredCallContextInfo; class SystemThreadPoolMethods; class ThreadFailureCallbackHolder; class UnregisterWilFeatureConfigurationChange; class delete_registry_watcher_state; class handle_invalid_resource_policy; class registry_watcher_state; class resource_policy; class tag_return_other; class unique_storage; } } 
+namespace wil { namespace details_abi { class FeatureStateData; class ProcessLocalData; class ProcessLocalStorageData; class RawUsageIndex; class ThreadLocalData; class UsageIndexes; class heap_buffer; class heap_vector; } } 
+namespace wistd { class default_delete; class function; class integral_constant; class unique_ptr; } 
+namespace wistd { namespace __function { class __base; } } 
+
+// Reconstructed from ExplorerFrame.dll by Windissect. 123 member(s).
+class CListViewPopup {
+public:
+    // Category: Refcount | Source: PDB Internal
+    // Symbol: ?AddRef@CListViewPopup@@UEAAKXZ
+    virtual unsigned long AddRef();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?Cancel@CListViewPopup@@UEAAJXZ
+    virtual long Cancel();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?ClearToolBar@CListViewPopup@@UEAAJXZ
+    virtual long ClearToolBar();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?Commit@CListViewPopup@@UEAAJH@Z
+    virtual long Commit(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?ContextSensitiveHelp@CListViewPopup@@UEAAJH@Z
+    virtual long ContextSensitiveHelp(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?CreateAndShow@CListViewPopup@@UEAAJPEAUHWND__@@PEBUtagLVPINITSTRUCT@@UtagPOINT@@UtagSIZE@@PEAGPEAUIListViewPopupCallback@@@Z
+    virtual long CreateAndShow(HWND__*, tagLVPINITSTRUCT const *, tagPOINT, tagSIZE, unsigned short *, IListViewPopupCallback *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?DeselectAllItems@CListViewPopup@@UEAAJW4LVPVIEWID@@@Z
+    virtual long DeselectAllItems(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?Destroy@CListViewPopup@@UEAAJW4LVP_DESTROY_FLAGS@@@Z
+    virtual long Destroy(int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetColor@CListViewPopup@@UEAAJW4VPCOLORFLAGS@@PEAK@Z
+    virtual long GetColor(int, unsigned long *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetFont@CListViewPopup@@UEAAJPEAUtagLOGFONTW@@@Z
+    virtual long GetFont(tagLOGFONTW *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetHotItem@CListViewPopup@@UEAAJW4LVPVIEWID@@PEAH@Z
+    virtual long GetHotItem(int, int *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetItemCount@CListViewPopup@@UEAAJW4LVPVIEWID@@HPEAI@Z
+    virtual long GetItemCount(int, int, unsigned int *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetItemHeight@CListViewPopup@@UEAAJPEAH@Z
+    virtual long GetItemHeight(int *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetItemState@CListViewPopup@@UEAAJW4LVPVIEWID@@HHKPEAK@Z
+    virtual long GetItemState(int, int, int, unsigned long, unsigned long *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetSearchControl@CListViewPopup@@UEAAJPEAPEAUIShellSearchControl@@@Z
+    virtual long GetSearchControl(IShellSearchControl * *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetSelectedItems@CListViewPopup@@UEAAJW4LVPVIEWID@@PEAIPEAPEAUtagLVITEMW@@@Z
+    virtual long GetSelectedItems(int, unsigned int *, tagLVITEMW * *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?GetWindow@CListViewPopup@@UEAAJPEAPEAUHWND__@@@Z
+    virtual long GetWindow(HWND__* *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?HasFocus@CListViewPopup@@UEAAJXZ
+    virtual long HasFocus();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?InsertItem@CListViewPopup@@UEAAJW4LVPVIEWID@@HQEAUtagLVITEMW@@@Z
+    virtual long InsertItem(int, int, tagLVITEMW * const);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?InsertToolBarItem@CListViewPopup@@UEAAJPEBU_TBBUTTON@@@Z
+    virtual long InsertToolBarItem(_TBBUTTON const *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?IsVisible@CListViewPopup@@UEAAJXZ
+    virtual long IsVisible();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?KillFocus@CListViewPopup@@UEAAJW4LVPVIEWID@@@Z
+    virtual long KillFocus(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?NextControl@CListViewPopup@@UEAAJH@Z
+    virtual long NextControl(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?OnChanging@CListViewPopup@@UEAAJH@Z
+    virtual long OnChanging(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?OnInvokeVerb@CListViewPopup@@UEAAJPEBG@Z
+    virtual long OnInvokeVerb(unsigned short const *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?OnStateChange@CListViewPopup@@UEAAJHPEAH@Z
+    virtual long OnStateChange(int, int *);
+    // Category: Refcount | Source: PDB Internal
+    // Symbol: ?QueryInterface@CListViewPopup@@UEAAJAEBU_GUID@@PEAPEAX@Z
+    virtual long QueryInterface(_GUID const &, void * *);
+    // Category: Refcount | Source: PDB Internal
+    // Symbol: ?Release@CListViewPopup@@UEAAKXZ
+    virtual unsigned long Release();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?RemoveAllItems@CListViewPopup@@UEAAJW4LVPVIEWID@@@Z
+    virtual long RemoveAllItems(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?RemoveItem@CListViewPopup@@UEAAJW4LVPVIEWID@@H@Z
+    virtual long RemoveItem(int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?RequestResize@CListViewPopup@@UEAAJXZ
+    virtual long RequestResize();
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetColor@CListViewPopup@@UEAAJW4VPCOLORFLAGS@@K@Z
+    virtual long SetColor(int, unsigned long);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetEmptyText@CListViewPopup@@UEAAJPEBG@Z
+    virtual long SetEmptyText(unsigned short const *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetFont@CListViewPopup@@UEAAJPEBUtagLOGFONTW@@H@Z
+    virtual long SetFont(tagLOGFONTW const *, int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetItemHeight@CListViewPopup@@UEAAJH@Z
+    virtual long SetItemHeight(int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetItemSelected@CListViewPopup@@UEAAJW4LVPVIEWID@@HHH@Z
+    virtual long SetItemSelected(int, int, int, int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetListViewFocus@CListViewPopup@@UEAAJW4LVPVIEWID@@H@Z
+    virtual long SetListViewFocus(int, int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetMaxToolbarWidth@CListViewPopup@@UEAAJH@Z
+    virtual long SetMaxToolbarWidth(int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetPosition@CListViewPopup@@UEAAJII@Z
+    virtual long SetPosition(unsigned int, unsigned int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetRedraw@CListViewPopup@@UEAAJW4LVPVIEWID@@H@Z
+    virtual long SetRedraw(int, int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetSearchState@CListViewPopup@@UEAAJW4SHELL_SEARCH_BAND_SEARCH_STATE@@@Z
+    virtual long SetSearchState(int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetSearchTarget@CListViewPopup@@UEAAJPEAUIShellSearchTarget@@@Z
+    virtual long SetSearchTarget(IShellSearchTarget *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetSearchText@CListViewPopup@@UEAAJPEBGW4tagSBSST_FLAGS@@@Z
+    virtual long SetSearchText(unsigned short const *, int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetTheme@CListViewPopup@@UEAAJPEBG0@Z
+    virtual long SetTheme(unsigned short const *, unsigned short const *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetToolbarPrompt@CListViewPopup@@UEAAJPEBG@Z
+    virtual long SetToolbarPrompt(unsigned short const *);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetVisible@CListViewPopup@@UEAAJI@Z
+    virtual long SetVisible(unsigned int);
+    // Category: Accessor | Source: PDB Internal
+    // Symbol: ?SetWatermark@CListViewPopup@@UEAAJPEAUHBITMAP__@@W4VPWATERMARKFLAGS@@@Z
+    virtual long SetWatermark(HBITMAP__*, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?Validate@CListViewPopup@@UEAAJPEAPEAG@Z
+    virtual long Validate(unsigned short * *);
+private:
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?ClassicHitTestMenuItem@CListViewPopup@@AEAA?AW4LVPHITTESTRESULT@@UtagPOINT@@AEAUtagRECT@@PEAU_IMAGELIST@@@Z
+    int ClassicHitTestMenuItem(tagPOINT, tagRECT &, _IMAGELIST *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_AddRemoveSpinner@CListViewPopup@@AEAAXHW4LVPVIEWID@@H@Z
+    void _AddRemoveSpinner(int, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_AdjustItemRect@CListViewPopup@@AEAAXPEAUtagRECT@@H@Z
+    void _AdjustItemRect(tagRECT *, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_CalcProgressRecs@CListViewPopup@@AEAAXPEBUtagRECT@@PEAU2@111@Z
+    void _CalcProgressRecs(tagRECT const *, tagRECT *, tagRECT *, tagRECT *, tagRECT *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_CancelSpinner@CListViewPopup@@AEAAXW4LVPVIEWID@@@Z
+    void _CancelSpinner(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_ClassicDrawMenuItem@CListViewPopup@@AEAAXPEBUtagDRAWITEMSTRUCT@@PEAGIPEAU_IMAGELIST@@2HH@Z
+    void _ClassicDrawMenuItem(tagDRAWITEMSTRUCT const *, unsigned short *, unsigned int, _IMAGELIST *, _IMAGELIST *, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_ClosePopup@CListViewPopup@@AEAAXXZ
+    void _ClosePopup();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_CopyInitData@CListViewPopup@@AEAAJPEBUtagLVPINITSTRUCT@@@Z
+    long _CopyInitData(tagLVPINITSTRUCT const *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_CreateListView@CListViewPopup@@AEAAJHW4LVPCONTROL@@@Z
+    long _CreateListView(int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_CtrlToLVIndex@CListViewPopup@@AEAAHW4LVPCONTROL@@@Z
+    int _CtrlToLVIndex(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawBackground@CListViewPopup@@AEAAXPEAUHDC__@@PEBUtagRECT@@@Z
+    void _DrawBackground(HDC__*, tagRECT const *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawEmptyText@CListViewPopup@@AEAAXPEAUHDC__@@@Z
+    void _DrawEmptyText(HDC__*);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawItem@CListViewPopup@@AEAAXPEAUtagDRAWITEMSTRUCT@@HPEAGIHH@Z
+    void _DrawItem(tagDRAWITEMSTRUCT *, int, unsigned short *, unsigned int, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawProgressItem@CListViewPopup@@AEAAXPEBGPEAUtagDRAWITEMSTRUCT@@@Z
+    void _DrawProgressItem(unsigned short const *, tagDRAWITEMSTRUCT *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawSeparator@CListViewPopup@@AEAAXPEAUHDC__@@H@Z
+    void _DrawSeparator(HDC__*, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_DrawToolbarPrompt@CListViewPopup@@AEAAXPEAUHDC__@@@Z
+    void _DrawToolbarPrompt(HDC__*);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_EnsureSpinnerImageList@CListViewPopup@@AEAAHXZ
+    int _EnsureSpinnerImageList();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_EnsureThemeAndFont@CListViewPopup@@AEAAXXZ
+    void _EnsureThemeAndFont();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetItemContentRect@CListViewPopup@@AEAAJW4LVPCONTROL@@HPEAUtagRECT@@@Z
+    long _GetItemContentRect(int, int, tagRECT *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetItemHeight@CListViewPopup@@AEAAIXZ
+    unsigned int _GetItemHeight();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetItemState@CListViewPopup@@AEAAJW4LVPCONTROL@@HPEAH@Z
+    long _GetItemState(int, int, int *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetItemWidth@CListViewPopup@@AEAAHW4LVPCONTROL@@PEAUIListView@@H@Z
+    int _GetItemWidth(int, IListView *, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetListView@CListViewPopup@@AEAAJW4LVPVIEWID@@PEAPEAUIListView@@@Z
+    long _GetListView(int, IListView * *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetListViewRequiredSize@CListViewPopup@@AEAAXPEAUtagSIZE@@0000@Z
+    void _GetListViewRequiredSize(tagSIZE *, tagSIZE *, tagSIZE *, tagSIZE *, tagSIZE *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetListViewType@CListViewPopup@@AEAA?AW4tagLVPLISTVIEWTYPE@@H@Z
+    int _GetListViewType(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetListViewWindow@CListViewPopup@@AEAAJW4LVPVIEWID@@PEAPEAUHWND__@@@Z
+    long _GetListViewWindow(int, HWND__* *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetNextControl@CListViewPopup@@AEAA?AW4LVPCONTROL@@W42@K@Z
+    int _GetNextControl(int, unsigned long);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetPropCtrlRequiredSize@CListViewPopup@@AEAAXPEAUtagSIZE@@@Z
+    void _GetPropCtrlRequiredSize(tagSIZE *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_GetToolBarRequiredSize@CListViewPopup@@AEAAXPEAUtagSIZE@@@Z
+    void _GetToolBarRequiredSize(tagSIZE *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_HasItemTheme@CListViewPopup@@AEAAHXZ
+    int _HasItemTheme();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_HitProgressItem@CListViewPopup@@AEAA?AW4LVPHITTESTRESULT@@UtagPOINT@@PEBUtagRECT@@@Z
+    int _HitProgressItem(tagPOINT, tagRECT const *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_HitTestItem@CListViewPopup@@AEAA?AW4LVPHITTESTRESULT@@W4LVPCONTROL@@HUtagPOINT@@@Z
+    int _HitTestItem(int, int, tagPOINT);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_HitTestRect@CListViewPopup@@AEAA?AW4LVPHITTESTRESULT@@UtagPOINT@@AEAUtagRECT@@@Z
+    int _HitTestRect(tagPOINT, tagRECT &);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_HitTestResultToFlags@CListViewPopup@@AEAAKW4LVPHITTESTRESULT@@@Z
+    unsigned long _HitTestResultToFlags(int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_IsItemDisabled@CListViewPopup@@AEAAHW4LVPCONTROL@@H@Z
+    int _IsItemDisabled(int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_LVSubProc@CListViewPopup@@AEAA_JW4LVPCONTROL@@PEAUHWND__@@I_K_J@Z
+    int64_t _LVSubProc(int, HWND__*, unsigned int, uint64_t, int64_t);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_LogMenuPopupEvent@CListViewPopup@@AEAAXK@Z
+    void _LogMenuPopupEvent(unsigned long);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_MainWindowProc@CListViewPopup@@AEAA_JPEAUHWND__@@I_K_J@Z
+    int64_t _MainWindowProc(HWND__*, unsigned int, uint64_t, int64_t);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_MeasureMenu@CListViewPopup@@AEAAXPEAUtagMEASUREITEMSTRUCT@@PEBGHH@Z
+    void _MeasureMenu(tagMEASUREITEMSTRUCT *, unsigned short const *, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnCheckboxLVNotify@CListViewPopup@@AEAA_JPEAUtagNMLISTVIEW@@@Z
+    int64_t _OnCheckboxLVNotify(tagNMLISTVIEW *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnCreate@CListViewPopup@@AEAA_JPEAUHWND__@@@Z
+    int64_t _OnCreate(HWND__*);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnDelayedSetVisible@CListViewPopup@@AEAAXXZ
+    void _OnDelayedSetVisible();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnDropDownTranslateMessage@CListViewPopup@@AEAA_JPEBUtagMSG@@@Z
+    int64_t _OnDropDownTranslateMessage(tagMSG const *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnGetInfoTip@CListViewPopup@@AEAAXPEAUtagNMLVGETINFOTIPW@@@Z
+    void _OnGetInfoTip(tagNMLVGETINFOTIPW *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnInvokeKey@CListViewPopup@@AEAA_JK@Z
+    int64_t _OnInvokeKey(unsigned long);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnMovementKey@CListViewPopup@@AEAA_JIK@Z
+    int64_t _OnMovementKey(unsigned int, unsigned long);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnNotify@CListViewPopup@@AEAA_JPEAUtagNMHDR@@@Z
+    int64_t _OnNotify(tagNMHDR *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnProcessDeleteKey@CListViewPopup@@AEAA_JXZ
+    int64_t _OnProcessDeleteKey();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnSelectItem@CListViewPopup@@AEAAXW4LVPCONTROL@@I@Z
+    void _OnSelectItem(int, unsigned int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_OnSimpleLVNotify@CListViewPopup@@AEAA_JPEAUtagNMLISTVIEW@@@Z
+    int64_t _OnSimpleLVNotify(tagNMLISTVIEW *);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_PositionPropCtrl@CListViewPopup@@AEAAXHHHH@Z
+    void _PositionPropCtrl(int, int, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_PositionSearchBox@CListViewPopup@@AEAAXHHHH@Z
+    void _PositionSearchBox(int, int, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_RegisterWindowClass@CListViewPopup@@AEAAXXZ
+    void _RegisterWindowClass();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_SetFocusToControl@CListViewPopup@@AEAAXW4LVPCONTROL@@H@Z
+    void _SetFocusToControl(int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_SetFocusToListViewItem@CListViewPopup@@AEAAXW4LVPVIEWID@@H@Z
+    void _SetFocusToListViewItem(int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_SetNextControlFocus@CListViewPopup@@AEAAHIKW4LVPCONTROL@@H@Z
+    int _SetNextControlFocus(unsigned int, unsigned long, int, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_SizeToContent@CListViewPopup@@AEAAXXZ
+    void _SizeToContent();
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_TBSubProc@CListViewPopup@@AEAA_JPEAUHWND__@@I_K_J@Z
+    int64_t _TBSubProc(HWND__*, unsigned int, uint64_t, int64_t);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?_TryMoveFocus@CListViewPopup@@AEAAHW4LVPCONTROL@@KH@Z
+    int _TryMoveFocus(int, unsigned long, int);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?s_LVSubClassProc@CListViewPopup@@CA_JPEAUHWND__@@I_K_J11@Z
+    static int64_t s_LVSubClassProc(HWND__*, unsigned int, uint64_t, int64_t, uint64_t, uint64_t);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?s_MainWindowProc@CListViewPopup@@CA_JPEAUHWND__@@I_K_J@Z
+    static int64_t s_MainWindowProc(HWND__*, unsigned int, uint64_t, int64_t);
+    // Category: Method | Source: PDB Internal
+    // Symbol: ?s_TBSubClassProc@CListViewPopup@@CA_JPEAUHWND__@@I_K_J11@Z
+    static int64_t s_TBSubClassProc(HWND__*, unsigned int, uint64_t, int64_t, uint64_t, uint64_t);
+    // Category: Dtor | Source: PDB Internal
+    // Symbol: ??1CListViewPopup@@AEAA@XZ
+    ~CListViewPopup();
+};
+
+```
+
+## Member List
+
+| Method | Return | Shape | Provenance | Exported |
+|---|---|---|---|---|
+| `AddRef` | `unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `_DrawProgressItem` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_CalcProgressRecs` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_GetItemHeight` | `unsigned int` | `Method` | `Pdb` | No (PDB) |
+| `s_LVSubClassProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_LVSubProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnNotify` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnCheckboxLVNotify` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_HitTestItem` | `enum LVPHITTESTRESULT` | `Method` | `Pdb` | No (PDB) |
+| `_GetItemContentRect` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_HitTestResultToFlags` | `unsigned long` | `Method` | `Pdb` | No (PDB) |
+| `_OnSimpleLVNotify` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_CtrlToLVIndex` | `int` | `Method` | `Pdb` | No (PDB) |
+| `_AdjustItemRect` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_MeasureMenu` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_HitTestRect` | `enum LVPHITTESTRESULT` | `Method` | `Pdb` | No (PDB) |
+| `_HasItemTheme` | `int` | `Method` | `Pdb` | No (PDB) |
+| `s_MainWindowProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_MainWindowProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `Release` | `unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `_DrawBackground` | `void` | `Method` | `Pdb` | No (PDB) |
+| `Cancel` | `long` | `Method` | `Pdb` | No (PDB) |
+| `ContextSensitiveHelp` | `long` | `Method` | `Pdb` | No (PDB) |
+| `GetColor` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetFont` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetItemHeight` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `NextControl` | `long` | `Method` | `Pdb` | No (PDB) |
+| `OnChanging` | `long` | `Method` | `Pdb` | No (PDB) |
+| `OnInvokeVerb` | `long` | `Method` | `Pdb` | No (PDB) |
+| `OnStateChange` | `long` | `Method` | `Pdb` | No (PDB) |
+| `RequestResize` | `long` | `Method` | `Pdb` | No (PDB) |
+| `SetFont` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetItemHeight` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetTheme` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetWatermark` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `InsertItem` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_EnsureThemeAndFont` | `void` | `Method` | `Pdb` | No (PDB) |
+| `SetRedraw` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `_ClassicDrawMenuItem` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_DrawItem` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_HitProgressItem` | `enum LVPHITTESTRESULT` | `Method` | `Pdb` | No (PDB) |
+| `ClassicHitTestMenuItem` | `enum LVPHITTESTRESULT` | `Method` | `Pdb` | No (PDB) |
+| `_EnsureSpinnerImageList` | `int` | `Method` | `Pdb` | No (PDB) |
+| `_GetListViewWindow` | `long` | `Method` | `Pdb` | No (PDB) |
+| `AddRef` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `AddRef` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `AddRef` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `GetSearchControl` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `Validate` | `long` | `Method` | `Pdb` | No (PDB) |
+| `AddRef` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `~CListViewPopup` | `void` | `Dtor` | `Pdb` | No (PDB) |
+| `ClearToolBar` | `long` | `Method` | `Pdb` | No (PDB) |
+| `Commit` | `long` | `Method` | `Pdb` | No (PDB) |
+| `CreateAndShow` | `long` | `Method` | `Pdb` | No (PDB) |
+| `DeselectAllItems` | `long` | `Method` | `Pdb` | No (PDB) |
+| `Destroy` | `long` | `Method` | `Pdb` | No (PDB) |
+| `GetHotItem` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetItemCount` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetItemState` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetSelectedItems` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `GetWindow` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `HasFocus` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `InsertToolBarItem` | `long` | `Method` | `Pdb` | No (PDB) |
+| `IsVisible` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `KillFocus` | `long` | `Method` | `Pdb` | No (PDB) |
+| `QueryInterface` | `long` | `Refcount` | `Pdb` | No (PDB) |
+| `QueryInterface` | `[thunk]: public: virtual long` | `Refcount` | `Pdb` | No (PDB) |
+| `QueryInterface` | `[thunk]: public: virtual long` | `Refcount` | `Pdb` | No (PDB) |
+| `QueryInterface` | `[thunk]: public: virtual long` | `Refcount` | `Pdb` | No (PDB) |
+| `QueryInterface` | `[thunk]: public: virtual long` | `Refcount` | `Pdb` | No (PDB) |
+| `Release` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `Release` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `Release` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `Release` | `[thunk]: public: virtual unsigned long` | `Refcount` | `Pdb` | No (PDB) |
+| `RemoveAllItems` | `long` | `Method` | `Pdb` | No (PDB) |
+| `RemoveItem` | `long` | `Method` | `Pdb` | No (PDB) |
+| `SetColor` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetEmptyText` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetItemSelected` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetListViewFocus` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetMaxToolbarWidth` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetPosition` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetSearchState` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetSearchTarget` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetSearchText` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetToolbarPrompt` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `SetVisible` | `long` | `Accessor` | `Pdb` | No (PDB) |
+| `_AddRemoveSpinner` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_CancelSpinner` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_ClosePopup` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_CopyInitData` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_CreateListView` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_DrawEmptyText` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_DrawSeparator` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_DrawToolbarPrompt` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_GetItemState` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_GetItemWidth` | `int` | `Method` | `Pdb` | No (PDB) |
+| `_GetListView` | `long` | `Method` | `Pdb` | No (PDB) |
+| `_GetListViewRequiredSize` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_GetListViewType` | `enum tagLVPLISTVIEWTYPE` | `Method` | `Pdb` | No (PDB) |
+| `_GetNextControl` | `enum LVPCONTROL` | `Method` | `Pdb` | No (PDB) |
+| `_GetPropCtrlRequiredSize` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_GetToolBarRequiredSize` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_IsItemDisabled` | `int` | `Method` | `Pdb` | No (PDB) |
+| `_LogMenuPopupEvent` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_OnCreate` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnDelayedSetVisible` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_OnDropDownTranslateMessage` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnGetInfoTip` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_OnInvokeKey` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnMovementKey` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnProcessDeleteKey` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_OnSelectItem` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_PositionPropCtrl` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_PositionSearchBox` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_RegisterWindowClass` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_SetFocusToControl` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_SetFocusToListViewItem` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_SetNextControlFocus` | `int` | `Method` | `Pdb` | No (PDB) |
+| `_SizeToContent` | `void` | `Method` | `Pdb` | No (PDB) |
+| `_TBSubProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
+| `_TryMoveFocus` | `int` | `Method` | `Pdb` | No (PDB) |
+| `s_TBSubClassProc` | `int64_t` | `Method` | `Pdb` | No (PDB) |
